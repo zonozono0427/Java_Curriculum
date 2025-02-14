@@ -12,6 +12,7 @@ public class Curriculum_A {
 		String stringName;
 		boolean booleanName;
 
+		
 		// 初期値
 		byteName = 0;
 		shortName = 0;
