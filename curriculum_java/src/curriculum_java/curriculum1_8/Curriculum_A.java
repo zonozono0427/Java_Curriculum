@@ -12,6 +12,7 @@ public class Curriculum_A {
 		String stringName;
 		boolean booleanName;
 
+		
 		// 初期値
 		byteName = 0;
 		shortName = 0;
@@ -20,7 +21,7 @@ public class Curriculum_A {
 		floatName = 0.0f;
 		doubleName = 0.0;
 		charName = '\u0000';
-		stringName = "";
+		stringName = null;
 		booleanName = false;
 
 		//代入
@@ -107,6 +108,10 @@ public class Curriculum_A {
 		System.out.println("BMIは" + String.format("%.2f", (weigth2 / ((height2 / 100) * (height2 / 100)))) + "です");
 
 		// 問10
+		age = 24;
+		height = 168.5;
+		weigth = 64.2;
+		favorite = "オムライス";
 		System.out.println(age >= 25);
 
 		// 問11
