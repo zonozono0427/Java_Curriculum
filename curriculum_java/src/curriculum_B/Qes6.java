@@ -23,7 +23,7 @@ public class Qes6 {
 		//テレビの個数のランダム
 		int tvStock = ran.nextInt(11);
 
-		for (String name : names) {
+		for (String name : names {
 
 			//ランダム個数(テレビディスプレイ以外）
 			int remainingStock = ran.nextInt(11);
