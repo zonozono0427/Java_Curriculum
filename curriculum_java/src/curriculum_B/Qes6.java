@@ -13,19 +13,20 @@ public class Qes6 {
 		// ランダムな数字を生成（0～11）
 		Random ran = new Random();
 
-		//商品を入力
+		// 商品を入力
 		String str = "";
 
 		str = sc.nextLine();
 
 		String[] names = str.split("、");
 
-		//テレビの個数のランダム
+		sc.close();
+
+		// テレビの個数のランダム
 		int tvStock = ran.nextInt(11);
 
-		for (String name : names {
-
-			//ランダム個数(テレビディスプレイ以外）
+		for (String name : names) {
+			// ランダム個数(テレビディスプレイ以外）
 			int remainingStock = ran.nextInt(11);
 
 			switch (name) {
@@ -58,7 +59,7 @@ public class Qes6 {
 				break;
 
 			default:
-				System.out.println("「" + str + "」は指定の商品ではありません");
+				System.out.println("「" + name + "」は指定の商品ではありません");
 				break;
 
 			}
