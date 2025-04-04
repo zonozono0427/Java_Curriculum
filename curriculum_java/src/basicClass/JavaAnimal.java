@@ -1,5 +1,9 @@
 package basicClass;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+
 public class JavaAnimal {
 
 	public static void main(String[] args) {
@@ -19,7 +23,14 @@ public class JavaAnimal {
 		dog1.displayInfo();
 
 		// 現在の日時を「yyyy-MM-dd H:m:s」形式で変数に代入して、コンソールに出力してください
+		dog1.displayInfo();
 
+        // 現在の日時を「yyyy-MM-dd H:m:s」形式で変数に代入して、コンソールに出力する
+        LocalDateTime now = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd H:m:s");
+        String formattedDateTime = now.format(formatter);
+        System.out.println(formattedDateTime);
+    System.out.println();
 		
 	}
 }

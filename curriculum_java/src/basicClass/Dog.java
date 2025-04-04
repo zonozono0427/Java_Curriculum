@@ -23,7 +23,6 @@ public class Dog {
 		System.out.println("動物の名前: " + name);
 		System.out.println("動物の数: " + number);
 
-		//
-
+	
 	}
 }
