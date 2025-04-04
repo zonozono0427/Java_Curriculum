@@ -81,14 +81,14 @@ public class Curriculum_New_1_18 {
 	 
 	// Q7：引数にQ6で作成したメソッドの返り値を受け取り、受け取った値が50以上ならばtrueそれ以外はfalseを返しコンソールに出力してください
 
-	public static void printIfAbove50(int[] average) {
-		for (int num : average) {
-			if (num >= 50) {
+	public static void printIfAbove50(double average) {
+		
+			if (average >= 50) {
 				System.out.println(true);
 			} else {
 				System.out.println(false);
 			}
-		}
+		
 
 	}
 
@@ -113,10 +113,10 @@ public class Curriculum_New_1_18 {
 		int[] arr2 = randomNumbers(3);
 
 		//Q6
-		rando(arr2);
+		double ave =rando(arr2);
 
 		//Q7
-		printIfAbove50(arr2);
+		printIfAbove50(ave);
 
 	}
 }
