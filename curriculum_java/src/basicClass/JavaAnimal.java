@@ -3,8 +3,6 @@ package basicClass;
 public class JavaAnimal {
 
 	public static void main(String[] args) {
-Dog dog1 = new Dog();
-		dog1.displayInfo();
 
 		Dog D = new Dog();
 
@@ -17,8 +15,11 @@ Dog dog1 = new Dog();
 		System.out.println(D.number);
 
 		//
-		
+		Dog dog1 = new Dog();
+		dog1.displayInfo();
+
 		// 現在の日時を「yyyy-MM-dd H:m:s」形式で変数に代入して、コンソールに出力してください
 
+		
 	}
 }
