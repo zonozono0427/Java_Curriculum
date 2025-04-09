@@ -11,7 +11,7 @@ public class Qes4 {
 				String formatJ = String.format("%02d", j);
 				System.out.print(formatI + " * " + formatJ + " = " + (String.format("%02d", i * j) + "\t||\t"));
 			}
-			System.out.println();
+
 		}
 
 	}

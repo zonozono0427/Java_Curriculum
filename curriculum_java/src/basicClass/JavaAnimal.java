@@ -17,12 +17,9 @@ public class JavaAnimal {
 		D.number = 1;
 		System.out.println(D.number);
 
-		//
-		Dog dog1 = new Dog();
-		dog1.displayInfo();
-
-		// 現在の日時を「yyyy-MM-dd H:m:s」形式で変数に代入して、コンソールに出力してください
-		dog1.displayInfo();
+		// 犬の数を指定したコンストラクタを使用
+		Dog dog = new Dog(5);
+		System.out.println("引数付きコンストラクタからの犬の数: " + dog.number);
 
 		// 現在の日時を「yyyy-MM-dd H:m:s」形式で変数に代入して、コンソールに出力する
 		LocalDateTime now = LocalDateTime.now();
