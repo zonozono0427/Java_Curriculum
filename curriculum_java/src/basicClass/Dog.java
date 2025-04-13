@@ -9,15 +9,13 @@ public class Dog {
 
 	// Q3：Q1で作成した変数に「犬」を代入するコンストラクタを作成してください。
 
-	 public Dog() {
-	        name = "犬"; // フィールドに直接代入
-	        number = 0;  // デフォルト値
+	public  Dog(){
+		name ="犬";
 	    }
 
 	// Q4：Q2で作成した変数に引数を代入するコンストラクタを作成してください。
-	public Dog(int number) {
-		name = "犬"; // フィールドに直接代入
-		this.number = number; // フィールドに引数を代入
+   public  Dog(int number) {
+    	this.number = number;
 
 	}
 
