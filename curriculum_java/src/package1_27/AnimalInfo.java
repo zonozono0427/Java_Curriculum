@@ -50,45 +50,42 @@ public class AnimalInfo {
 		// 学名を格納するマップ
 		Map<String, String> scientificNames = new HashMap<>();
 		scientificNames.put("ライオン", "パンテラ レオ");
-		scientificNames.put("ゾウ", "ロキソドンタ");
-		scientificNames.put("パンダ", "アイルロポダ メラノレウカ");
-		scientificNames.put("チンパンジー", "パン トログロディテス");
-		scientificNames.put("シマウマ", "エクィス クワッガ");
-		scientificNames.put("インコ", "プシタクルス");
+		scientificNames.put("ゾウ", "ロキソドンタ・サイクロティス");
+		scientificNames.put("パンダ", "アイルロポダ・メラノレウカ");
+		scientificNames.put("チンパンジー", "パン・トゥログロディテス");
+		scientificNames.put("シマウマ", "チャップマンシマウマ");
+		scientificNames.put("インコ", "不明");
 
-		// コンソール入力の処理
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("コンソールに文字を入力してください（例：ライオン:2.1:80,ゾウ:3.2:40）");
-		String input = scanner.nextLine();
+		 // コンソール入力の処理
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("コンソールに文字を入力してください（例：ライオン:2.1:80,ゾウ:3.2:40）");
+        String input = scanner.nextLine();
 
-		// 入力全体をカンマで区切り、動物データごとに処理
+        // 入力全体をカンマで区切り、動物データごとに処理
+        String[] animalDataList = input.split(",");
+        for (String animalData : animalDataList) {
+            // 各動物データを ":" で分割
+            String[] data = animalData.split(":");
+            if (data.length == 3) {
+                String name = data[0];
+                String length = data[1];
+                String speed = data[2];
 
-		String[] animalDataList = input.split(",");
-		for (String animalData : animalDataList)
-			;
-		String[] data = input.split(":");
-		if (data.length == 3) {
-			String name = data[0];
-			String length = data[1];
-			String speed = data[2];
-			// 学名を取得
-			String scientificName = scientificNames.getOrDefault(name, "学名不明");
+                // 学名を取得
+                String scientificName = scientificNames.getOrDefault(name, "学名不明");
 
-			// 出力結果
-			System.out.println("動物名：" + name);
-			System.out.println("体長：" + length + "m");
-			System.out.println("速度：" + speed + "km/h");
-			System.out.println("学名：" + scientificName);
-			System.out.println("----------------------");
+                // 出力結果を表示
+                System.out.println("動物名：" + name);
+                System.out.println("体長：" + length + "m");
+                System.out.println("速度：" + speed + "km/h");
+                System.out.println("学名：" + scientificName);
+                System.out.println("----------------------");
+            } else {
+                // 入力形式が正しくない場合のエラーメッセージ
+                System.out.println("形式が正しくありません：" + animalData);
+            }
+        }
 
-			// Animalインスタンスを作成
-			Animal animal = new Animal(name, length, speed, scientificName);
-
-			// 情報を表示
-			animal.displayInfo();
-		} else {
-			System.out.println("入力形式が正しくありません。正しい形式は '動物名:体長:速度' です。");
-		}
-		scanner.close();
+        scanner.close();
 	}
 }
